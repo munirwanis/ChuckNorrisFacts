@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1CCF8C620AF842000E67D40 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF8C520AF842000E67D40 /* Fact.swift */; };
+		A1CCF8C920AF85ED00E67D40 /* FactService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF8C820AF85ED00E67D40 /* FactService.swift */; };
+		A1CCF8CC20AF865A00E67D40 /* FactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF8CB20AF865A00E67D40 /* FactModel.swift */; };
 		A1E08C9F20AF67AF002E1ED3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E08C9E20AF67AF002E1ED3 /* AppDelegate.swift */; };
 		A1E08CA120AF67AF002E1ED3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E08CA020AF67AF002E1ED3 /* ViewController.swift */; };
 		A1E08CA420AF67AF002E1ED3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1E08CA220AF67AF002E1ED3 /* Main.storyboard */; };
@@ -56,6 +59,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A1CCF8C520AF842000E67D40 /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
+		A1CCF8C820AF85ED00E67D40 /* FactService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactService.swift; sourceTree = "<group>"; };
+		A1CCF8CB20AF865A00E67D40 /* FactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactModel.swift; sourceTree = "<group>"; };
 		A1E08C9B20AF67AF002E1ED3 /* ChuckNorrisFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuckNorrisFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E08C9E20AF67AF002E1ED3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1E08CA020AF67AF002E1ED3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +114,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A1CCF8C320AF840700E67D40 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				A1CCF8CA20AF864E00E67D40 /* Entity */,
+				A1CCF8C720AF85D200E67D40 /* Service */,
+				A1CCF8C420AF840C00E67D40 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		A1CCF8C420AF840C00E67D40 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A1CCF8CB20AF865A00E67D40 /* FactModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A1CCF8C720AF85D200E67D40 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				A1CCF8C820AF85ED00E67D40 /* FactService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		A1CCF8CA20AF864E00E67D40 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				A1CCF8C520AF842000E67D40 /* Fact.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		A1E08C9220AF67AF002E1ED3 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +172,7 @@
 		A1E08C9D20AF67AF002E1ED3 /* ChuckNorrisFacts */ = {
 			isa = PBXGroup;
 			children = (
+				A1CCF8C320AF840700E67D40 /* Domain */,
 				A1E08C9E20AF67AF002E1ED3 /* AppDelegate.swift */,
 				A1E08CA020AF67AF002E1ED3 /* ViewController.swift */,
 				A1E08CA220AF67AF002E1ED3 /* Main.storyboard */,
@@ -329,7 +370,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1E08CA120AF67AF002E1ED3 /* ViewController.swift in Sources */,
+				A1CCF8C620AF842000E67D40 /* Fact.swift in Sources */,
 				A1E08C9F20AF67AF002E1ED3 /* AppDelegate.swift in Sources */,
+				A1CCF8CC20AF865A00E67D40 /* FactModel.swift in Sources */,
+				A1CCF8C920AF85ED00E67D40 /* FactService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
