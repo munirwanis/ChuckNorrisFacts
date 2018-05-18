@@ -14,6 +14,14 @@
 		A1E08CA920AF67B1002E1ED3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1E08CA720AF67B1002E1ED3 /* LaunchScreen.storyboard */; };
 		A1E08CB420AF67B1002E1ED3 /* ChuckNorrisFactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E08CB320AF67B1002E1ED3 /* ChuckNorrisFactsTests.swift */; };
 		A1E08CBF20AF67B1002E1ED3 /* ChuckNorrisFactsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E08CBE20AF67B1002E1ED3 /* ChuckNorrisFactsUITests.swift */; };
+		A1E08CD420AF762A002E1ED3 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E08CCE20AF7629002E1ED3 /* RxSwift.framework */; };
+		A1E08CD520AF762A002E1ED3 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E08CCF20AF7629002E1ED3 /* AlamofireImage.framework */; };
+		A1E08CD620AF762A002E1ED3 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E08CD020AF7629002E1ED3 /* Alamofire.framework */; };
+		A1E08CD720AF762A002E1ED3 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E08CD120AF7629002E1ED3 /* RxCocoa.framework */; };
+		A1E08CE320AF7979002E1ED3 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E08CE120AF7979002E1ED3 /* RxTest.framework */; };
+		A1E08CE420AF7979002E1ED3 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E08CE220AF7979002E1ED3 /* RxBlocking.framework */; };
+		A1E08CE520AF7982002E1ED3 /* RxBlocking.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A1E08CE220AF7979002E1ED3 /* RxBlocking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A1E08CE620AF7982002E1ED3 /* RxTest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A1E08CE120AF7979002E1ED3 /* RxTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +41,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A1E08CDC20AF7886002E1ED3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A1E08CE520AF7982002E1ED3 /* RxBlocking.framework in CopyFiles */,
+				A1E08CE620AF7982002E1ED3 /* RxTest.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		A1E08C9B20AF67AF002E1ED3 /* ChuckNorrisFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuckNorrisFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E08C9E20AF67AF002E1ED3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +69,12 @@
 		A1E08CBA20AF67B1002E1ED3 /* ChuckNorrisFactsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChuckNorrisFactsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E08CBE20AF67B1002E1ED3 /* ChuckNorrisFactsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChuckNorrisFactsUITests.swift; sourceTree = "<group>"; };
 		A1E08CC020AF67B1002E1ED3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1E08CCE20AF7629002E1ED3 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		A1E08CCF20AF7629002E1ED3 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
+		A1E08CD020AF7629002E1ED3 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		A1E08CD120AF7629002E1ED3 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		A1E08CE120AF7979002E1ED3 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
+		A1E08CE220AF7979002E1ED3 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +82,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1E08CD420AF762A002E1ED3 /* RxSwift.framework in Frameworks */,
+				A1E08CD520AF762A002E1ED3 /* AlamofireImage.framework in Frameworks */,
+				A1E08CD620AF762A002E1ED3 /* Alamofire.framework in Frameworks */,
+				A1E08CD720AF762A002E1ED3 /* RxCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +93,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1E08CE320AF7979002E1ED3 /* RxTest.framework in Frameworks */,
+				A1E08CE420AF7979002E1ED3 /* RxBlocking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +115,7 @@
 				A1E08CB220AF67B1002E1ED3 /* ChuckNorrisFactsTests */,
 				A1E08CBD20AF67B1002E1ED3 /* ChuckNorrisFactsUITests */,
 				A1E08C9C20AF67AF002E1ED3 /* Products */,
+				A1E08CCC20AF7629002E1ED3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +160,19 @@
 			path = ChuckNorrisFactsUITests;
 			sourceTree = "<group>";
 		};
+		A1E08CCC20AF7629002E1ED3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1E08CE220AF7979002E1ED3 /* RxBlocking.framework */,
+				A1E08CE120AF7979002E1ED3 /* RxTest.framework */,
+				A1E08CD020AF7629002E1ED3 /* Alamofire.framework */,
+				A1E08CCF20AF7629002E1ED3 /* AlamofireImage.framework */,
+				A1E08CD120AF7629002E1ED3 /* RxCocoa.framework */,
+				A1E08CCE20AF7629002E1ED3 /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +183,7 @@
 				A1E08C9720AF67AF002E1ED3 /* Sources */,
 				A1E08C9820AF67AF002E1ED3 /* Frameworks */,
 				A1E08C9920AF67AF002E1ED3 /* Resources */,
+				A1E08CD920AF76C3002E1ED3 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -152,6 +201,7 @@
 				A1E08CAB20AF67B1002E1ED3 /* Sources */,
 				A1E08CAC20AF67B1002E1ED3 /* Frameworks */,
 				A1E08CAD20AF67B1002E1ED3 /* Resources */,
+				A1E08CDC20AF7886002E1ED3 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -250,6 +300,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A1E08CD920AF76C3002E1ED3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxTest.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A1E08C9720AF67AF002E1ED3 /* Sources */ = {
@@ -433,6 +505,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H4K48S49BZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ChuckNorrisFacts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -453,6 +529,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H4K48S49BZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ChuckNorrisFacts/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -473,6 +553,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H4K48S49BZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ChuckNorrisFactsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -494,6 +578,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H4K48S49BZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ChuckNorrisFactsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
