@@ -10,6 +10,7 @@
 		A1CCF8C620AF842000E67D40 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF8C520AF842000E67D40 /* Fact.swift */; };
 		A1CCF8C920AF85ED00E67D40 /* FactService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF8C820AF85ED00E67D40 /* FactService.swift */; };
 		A1CCF8CC20AF865A00E67D40 /* FactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF8CB20AF865A00E67D40 /* FactModel.swift */; };
+		A1CD4F8220B12FC2007C7C05 /* ListFactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD4F8120B12FC2007C7C05 /* ListFactsTableViewController.swift */; };
 		A1E08C9F20AF67AF002E1ED3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E08C9E20AF67AF002E1ED3 /* AppDelegate.swift */; };
 		A1E08CA420AF67AF002E1ED3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1E08CA220AF67AF002E1ED3 /* Main.storyboard */; };
 		A1E08CA620AF67B1002E1ED3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1E08CA520AF67B1002E1ED3 /* Assets.xcassets */; };
@@ -61,6 +62,7 @@
 		A1CCF8C520AF842000E67D40 /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
 		A1CCF8C820AF85ED00E67D40 /* FactService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactService.swift; sourceTree = "<group>"; };
 		A1CCF8CB20AF865A00E67D40 /* FactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactModel.swift; sourceTree = "<group>"; };
+		A1CD4F8120B12FC2007C7C05 /* ListFactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFactsTableViewController.swift; sourceTree = "<group>"; };
 		A1E08C9B20AF67AF002E1ED3 /* ChuckNorrisFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuckNorrisFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E08C9E20AF67AF002E1ED3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1E08CA320AF67AF002E1ED3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 		A1CD4F7E20B12F1C007C7C05 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				A1CD4F8020B12FA7007C7C05 /* List Facts */,
 				A1CD4F7F20B12F28007C7C05 /* Storyboards */,
 			);
 			path = Presentation;
@@ -171,6 +174,14 @@
 				A1E08CA720AF67B1002E1ED3 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		A1CD4F8020B12FA7007C7C05 /* List Facts */ = {
+			isa = PBXGroup;
+			children = (
+				A1CD4F8120B12FC2007C7C05 /* ListFactsTableViewController.swift */,
+			);
+			path = "List Facts";
 			sourceTree = "<group>";
 		};
 		A1E08C9220AF67AF002E1ED3 = {
@@ -390,6 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1CD4F8220B12FC2007C7C05 /* ListFactsTableViewController.swift in Sources */,
 				A1CCF8C620AF842000E67D40 /* Fact.swift in Sources */,
 				A1E08C9F20AF67AF002E1ED3 /* AppDelegate.swift in Sources */,
 				A1CCF8CC20AF865A00E67D40 /* FactModel.swift in Sources */,
