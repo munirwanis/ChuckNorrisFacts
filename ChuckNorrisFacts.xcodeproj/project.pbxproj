@@ -11,7 +11,6 @@
 		A1CCF8C920AF85ED00E67D40 /* FactService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF8C820AF85ED00E67D40 /* FactService.swift */; };
 		A1CCF8CC20AF865A00E67D40 /* FactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF8CB20AF865A00E67D40 /* FactModel.swift */; };
 		A1E08C9F20AF67AF002E1ED3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E08C9E20AF67AF002E1ED3 /* AppDelegate.swift */; };
-		A1E08CA120AF67AF002E1ED3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E08CA020AF67AF002E1ED3 /* ViewController.swift */; };
 		A1E08CA420AF67AF002E1ED3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1E08CA220AF67AF002E1ED3 /* Main.storyboard */; };
 		A1E08CA620AF67B1002E1ED3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1E08CA520AF67B1002E1ED3 /* Assets.xcassets */; };
 		A1E08CA920AF67B1002E1ED3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1E08CA720AF67B1002E1ED3 /* LaunchScreen.storyboard */; };
@@ -64,7 +63,6 @@
 		A1CCF8CB20AF865A00E67D40 /* FactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactModel.swift; sourceTree = "<group>"; };
 		A1E08C9B20AF67AF002E1ED3 /* ChuckNorrisFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuckNorrisFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E08C9E20AF67AF002E1ED3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A1E08CA020AF67AF002E1ED3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A1E08CA320AF67AF002E1ED3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A1E08CA520AF67B1002E1ED3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A1E08CA820AF67B1002E1ED3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -148,6 +146,33 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		A1CD4F7D20B12F09007C7C05 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A1E08C9E20AF67AF002E1ED3 /* AppDelegate.swift */,
+				A1E08CA520AF67B1002E1ED3 /* Assets.xcassets */,
+				A1E08CAA20AF67B1002E1ED3 /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A1CD4F7E20B12F1C007C7C05 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				A1CD4F7F20B12F28007C7C05 /* Storyboards */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		A1CD4F7F20B12F28007C7C05 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A1E08CA220AF67AF002E1ED3 /* Main.storyboard */,
+				A1E08CA720AF67B1002E1ED3 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		A1E08C9220AF67AF002E1ED3 = {
 			isa = PBXGroup;
 			children = (
@@ -172,13 +197,9 @@
 		A1E08C9D20AF67AF002E1ED3 /* ChuckNorrisFacts */ = {
 			isa = PBXGroup;
 			children = (
+				A1CD4F7D20B12F09007C7C05 /* Supporting Files */,
 				A1CCF8C320AF840700E67D40 /* Domain */,
-				A1E08C9E20AF67AF002E1ED3 /* AppDelegate.swift */,
-				A1E08CA020AF67AF002E1ED3 /* ViewController.swift */,
-				A1E08CA220AF67AF002E1ED3 /* Main.storyboard */,
-				A1E08CA520AF67B1002E1ED3 /* Assets.xcassets */,
-				A1E08CA720AF67B1002E1ED3 /* LaunchScreen.storyboard */,
-				A1E08CAA20AF67B1002E1ED3 /* Info.plist */,
+				A1CD4F7E20B12F1C007C7C05 /* Presentation */,
 			);
 			path = ChuckNorrisFacts;
 			sourceTree = "<group>";
@@ -369,7 +390,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1E08CA120AF67AF002E1ED3 /* ViewController.swift in Sources */,
 				A1CCF8C620AF842000E67D40 /* Fact.swift in Sources */,
 				A1E08C9F20AF67AF002E1ED3 /* AppDelegate.swift in Sources */,
 				A1CCF8CC20AF865A00E67D40 /* FactModel.swift in Sources */,
