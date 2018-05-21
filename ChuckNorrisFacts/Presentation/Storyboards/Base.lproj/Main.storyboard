@@ -32,6 +32,7 @@
                                             <rect key="frame" x="16" y="11" width="108" height="108"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="M6Q-Ih-VSF" secondAttribute="height" multiplier="1:1" id="ELL-Ls-KWS"/>
+                                                <constraint firstAttribute="width" constant="108" id="oxi-Li-WSR"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When Chuck Norris gets fast food, his order is ready before he walks in." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67B-lS-spn">

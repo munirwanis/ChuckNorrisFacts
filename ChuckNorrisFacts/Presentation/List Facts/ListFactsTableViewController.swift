@@ -38,7 +38,7 @@ class ListFactsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: FactTableViewCell.identifier, for: indexPath)
         return cell
     }
 
@@ -107,5 +107,7 @@ extension ListFactsTableViewController {
             print(self.termToBeSearchedTextField?.text ?? "No term")
         }
         alertView.addAction(searchAction)
+        
+        present(alertView, animated: true, completion: nil)
     }
 }
