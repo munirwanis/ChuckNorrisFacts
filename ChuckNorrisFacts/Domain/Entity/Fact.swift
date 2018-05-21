@@ -14,3 +14,5 @@ struct Fact: Decodable {
     let url: String
     let value: String
 }
+
+typealias Facts = [Fact]
