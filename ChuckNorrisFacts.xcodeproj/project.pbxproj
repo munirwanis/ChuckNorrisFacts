@@ -17,6 +17,7 @@
 		A1CCF8D820B34DC900E67D40 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF8D720B34DC900E67D40 /* Log.swift */; };
 		A1CCF8DA20B34E1F00E67D40 /* Do.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF8D920B34E1F00E67D40 /* Do.swift */; };
 		A1CCF8DC20B3571300E67D40 /* Reactive+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF8DB20B3571300E67D40 /* Reactive+Extension.swift */; };
+		A1CCF8DE20B3730C00E67D40 /* FactPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF8DD20B3730C00E67D40 /* FactPresentation.swift */; };
 		A1CD4F8220B12FC2007C7C05 /* ListFactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD4F8120B12FC2007C7C05 /* ListFactsTableViewController.swift */; };
 		A1E08C9F20AF67AF002E1ED3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E08C9E20AF67AF002E1ED3 /* AppDelegate.swift */; };
 		A1E08CA420AF67AF002E1ED3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1E08CA220AF67AF002E1ED3 /* Main.storyboard */; };
@@ -76,6 +77,7 @@
 		A1CCF8D720B34DC900E67D40 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		A1CCF8D920B34E1F00E67D40 /* Do.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Do.swift; sourceTree = "<group>"; };
 		A1CCF8DB20B3571300E67D40 /* Reactive+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reactive+Extension.swift"; sourceTree = "<group>"; };
+		A1CCF8DD20B3730C00E67D40 /* FactPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactPresentation.swift; sourceTree = "<group>"; };
 		A1CD4F8120B12FC2007C7C05 /* ListFactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFactsTableViewController.swift; sourceTree = "<group>"; };
 		A1E08C9B20AF67AF002E1ED3 /* ChuckNorrisFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuckNorrisFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E08C9E20AF67AF002E1ED3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				A1CCF8CD20B33D9600E67D40 /* FactTableViewCell.swift */,
 				A1CCF8CF20B3462300E67D40 /* State.swift */,
 				A1CCF8D120B3474100E67D40 /* ListFactsViewModel.swift */,
+				A1CCF8DD20B3730C00E67D40 /* FactPresentation.swift */,
 			);
 			path = "List Facts";
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				A1CCF8DA20B34E1F00E67D40 /* Do.swift in Sources */,
 				A1CCF8D620B34DA800E67D40 /* NSObject+Extension.swift in Sources */,
 				A1E08C9F20AF67AF002E1ED3 /* AppDelegate.swift in Sources */,
+				A1CCF8DE20B3730C00E67D40 /* FactPresentation.swift in Sources */,
 				A1CCF8CE20B33D9600E67D40 /* FactTableViewCell.swift in Sources */,
 				A1CCF8D220B3474100E67D40 /* ListFactsViewModel.swift in Sources */,
 				A1CCF8CC20AF865A00E67D40 /* FactModel.swift in Sources */,
