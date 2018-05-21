@@ -10,6 +10,12 @@
 		A1CCF8C620AF842000E67D40 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF8C520AF842000E67D40 /* Fact.swift */; };
 		A1CCF8C920AF85ED00E67D40 /* FactService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF8C820AF85ED00E67D40 /* FactService.swift */; };
 		A1CCF8CC20AF865A00E67D40 /* FactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF8CB20AF865A00E67D40 /* FactModel.swift */; };
+		A1CCF8CE20B33D9600E67D40 /* FactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF8CD20B33D9600E67D40 /* FactTableViewCell.swift */; };
+		A1CCF8D020B3462300E67D40 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF8CF20B3462300E67D40 /* State.swift */; };
+		A1CCF8D220B3474100E67D40 /* ListFactsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF8D120B3474100E67D40 /* ListFactsViewModel.swift */; };
+		A1CCF8D620B34DA800E67D40 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF8D520B34DA800E67D40 /* NSObject+Extension.swift */; };
+		A1CCF8D820B34DC900E67D40 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF8D720B34DC900E67D40 /* Log.swift */; };
+		A1CCF8DA20B34E1F00E67D40 /* Do.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF8D920B34E1F00E67D40 /* Do.swift */; };
 		A1CD4F8220B12FC2007C7C05 /* ListFactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD4F8120B12FC2007C7C05 /* ListFactsTableViewController.swift */; };
 		A1E08C9F20AF67AF002E1ED3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E08C9E20AF67AF002E1ED3 /* AppDelegate.swift */; };
 		A1E08CA420AF67AF002E1ED3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1E08CA220AF67AF002E1ED3 /* Main.storyboard */; };
@@ -62,6 +68,12 @@
 		A1CCF8C520AF842000E67D40 /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
 		A1CCF8C820AF85ED00E67D40 /* FactService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactService.swift; sourceTree = "<group>"; };
 		A1CCF8CB20AF865A00E67D40 /* FactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactModel.swift; sourceTree = "<group>"; };
+		A1CCF8CD20B33D9600E67D40 /* FactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactTableViewCell.swift; sourceTree = "<group>"; };
+		A1CCF8CF20B3462300E67D40 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		A1CCF8D120B3474100E67D40 /* ListFactsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFactsViewModel.swift; sourceTree = "<group>"; };
+		A1CCF8D520B34DA800E67D40 /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
+		A1CCF8D720B34DC900E67D40 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		A1CCF8D920B34E1F00E67D40 /* Do.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Do.swift; sourceTree = "<group>"; };
 		A1CD4F8120B12FC2007C7C05 /* ListFactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFactsTableViewController.swift; sourceTree = "<group>"; };
 		A1E08C9B20AF67AF002E1ED3 /* ChuckNorrisFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuckNorrisFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E08C9E20AF67AF002E1ED3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +160,24 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		A1CCF8D320B34D8600E67D40 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				A1CCF8D420B34D9000E67D40 /* Extensions */,
+				A1CCF8D720B34DC900E67D40 /* Log.swift */,
+				A1CCF8D920B34E1F00E67D40 /* Do.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		A1CCF8D420B34D9000E67D40 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A1CCF8D520B34DA800E67D40 /* NSObject+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		A1CD4F7D20B12F09007C7C05 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +210,9 @@
 			isa = PBXGroup;
 			children = (
 				A1CD4F8120B12FC2007C7C05 /* ListFactsTableViewController.swift */,
+				A1CCF8CD20B33D9600E67D40 /* FactTableViewCell.swift */,
+				A1CCF8CF20B3462300E67D40 /* State.swift */,
+				A1CCF8D120B3474100E67D40 /* ListFactsViewModel.swift */,
 			);
 			path = "List Facts";
 			sourceTree = "<group>";
@@ -208,6 +241,7 @@
 		A1E08C9D20AF67AF002E1ED3 /* ChuckNorrisFacts */ = {
 			isa = PBXGroup;
 			children = (
+				A1CCF8D320B34D8600E67D40 /* Shared */,
 				A1CD4F7D20B12F09007C7C05 /* Supporting Files */,
 				A1CCF8C320AF840700E67D40 /* Domain */,
 				A1CD4F7E20B12F1C007C7C05 /* Presentation */,
@@ -403,8 +437,14 @@
 			files = (
 				A1CD4F8220B12FC2007C7C05 /* ListFactsTableViewController.swift in Sources */,
 				A1CCF8C620AF842000E67D40 /* Fact.swift in Sources */,
+				A1CCF8D820B34DC900E67D40 /* Log.swift in Sources */,
+				A1CCF8DA20B34E1F00E67D40 /* Do.swift in Sources */,
+				A1CCF8D620B34DA800E67D40 /* NSObject+Extension.swift in Sources */,
 				A1E08C9F20AF67AF002E1ED3 /* AppDelegate.swift in Sources */,
+				A1CCF8CE20B33D9600E67D40 /* FactTableViewCell.swift in Sources */,
+				A1CCF8D220B3474100E67D40 /* ListFactsViewModel.swift in Sources */,
 				A1CCF8CC20AF865A00E67D40 /* FactModel.swift in Sources */,
+				A1CCF8D020B3462300E67D40 /* State.swift in Sources */,
 				A1CCF8C920AF85ED00E67D40 /* FactService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -585,7 +625,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = ChuckNorrisFacts/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ChuckNorrisFacts/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -609,7 +649,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = ChuckNorrisFacts/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ChuckNorrisFacts/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

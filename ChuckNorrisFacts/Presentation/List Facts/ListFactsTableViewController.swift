@@ -7,9 +7,16 @@
 //
 
 import UIKit
+import RxSwift
 
 class ListFactsTableViewController: UITableViewController {
 
+    private let viewModel: ListFactsViewModel = {
+        return ListFactsViewModel()
+    }()
+    
+    private var termToBeSearchedTextField: UITextField?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,24 +30,17 @@ class ListFactsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 1
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
@@ -86,4 +86,26 @@ class ListFactsTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+}
+
+// MARK: - Action methods
+
+extension ListFactsTableViewController {
+    @IBAction private func didPressActionButton(_ sender: UIBarButtonItem) {
+        let alertView = UIAlertController(title: "Pesquisa", message: nil, preferredStyle: .alert)
+        alertView.addTextField { textField in
+            textField.placeholder = "Digite o termo a ser pesquisado..."
+            self.termToBeSearchedTextField = textField
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel) { _ in
+            alertView.dismiss(animated: true, completion: nil)
+        }
+        alertView.addAction(cancelAction)
+        let searchAction = UIAlertAction(title: "Pesquisar", style: .default) { _ in
+            // TODO: Logic
+            print(self.termToBeSearchedTextField?.text ?? "No term")
+        }
+        alertView.addAction(searchAction)
+    }
 }
