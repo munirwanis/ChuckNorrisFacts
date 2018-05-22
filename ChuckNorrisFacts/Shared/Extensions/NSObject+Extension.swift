@@ -15,7 +15,7 @@ extension Identifying where Self: NSObject {
     static var identifier: String { return String(describing: self) }
 
     static var applicationName: String {
-        return Bundle.main.infoDictionary?[kCFBundleNameKey as String] as? String ?? "Happy Travels"
+        return Bundle.main.infoDictionary?[kCFBundleNameKey as String] as? String ?? "Chuck Norris Facts"
     }
 }
 

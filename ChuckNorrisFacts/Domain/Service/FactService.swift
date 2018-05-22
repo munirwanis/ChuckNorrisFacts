@@ -15,12 +15,17 @@ protocol FactServiceProtocol {
 }
 
 struct FactService: FactServiceProtocol {
+    let map: FactsMapperProtocol
+    
     func getFacts(term: String) -> Observable<Facts> {
         return Alamofire.request("https://api.chucknorris.io/jokes/search?query=\(term)").rx.responseData()
             .retry(1)
-            .timeout(60, scheduler: MainScheduler.instance)
-            .map { data in try JSONDecoder().decode(Facts.self, from: data) }
+            .map { data in try self.map.facts(from: data) }
             .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
             .observeOn(MainScheduler.instance)
+    }
+    
+    init(mapper: FactsMapperProtocol = FactsMapper()) {
+        self.map = mapper
     }
 }
