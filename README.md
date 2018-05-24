@@ -7,3 +7,5 @@ https://github.com/Quick/Quick/blob/master/Documentation/en-us/InstallingQuick.m
 https://github.com/orakaro/The-introduction-to-RxSwift-you-have-been-missing
 
 https://github.com/nicklockwood/SwiftFormat#xcode-source-editor-extension - shortcuts: option + s (format selection), option + f (format file)
+
+https://www.youtube.com/watch?v=W3zGx4TUaCE
