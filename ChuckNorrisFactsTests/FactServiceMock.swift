@@ -6,6 +6,7 @@
 //  Copyright © 2018 Wanis. All rights reserved.
 //
 
+import Foundation
 @testable import ChuckNorrisFacts
 import RxSwift
 
@@ -34,5 +35,9 @@ struct FactServiceMock: FactServiceProtocol {
     init(fact: Fact) {
         self.shouldReturnSuccess = true
         self.facts.append(fact)
+    }
+    
+    init() {
+        self.shouldReturnSuccess = true
     }
 }

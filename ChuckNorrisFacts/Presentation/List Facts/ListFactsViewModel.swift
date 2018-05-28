@@ -8,19 +8,35 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 
-class ListFactsViewModel {
-    let service = FactService()
+final class ListFactsViewModel {
+    private let service: FactServiceProtocol
+    private let mapper: FactsPresentationMapperProtocol
+    private let bag = DisposeBag()
+    var currentState = BehaviorRelay<ListFactsState>(value: .waitingForInput)
     
-    var presentation: Observable<[FactPresentation]>
-    
-    init() {
-        presentation = service.getFacts(term: "")
-            .map { facts in ListFactsViewModel.convert(facts) }
-            .observeOn(MainScheduler.instance)        
+    init(service: FactServiceProtocol = FactService(),
+         mapper: FactsPresentationMapperProtocol = FactsPresentationMapper()) {
+        self.service = service
+        self.mapper = mapper
     }
-    
-    private static func convert(_ facts: Facts) -> [FactPresentation] {
-        return facts.compactMap { FactPresentation(imageURL: $0.iconUrl, factText: $0.value) }
+}
+
+
+// MARK: - Public methods
+
+extension ListFactsViewModel {
+    func getFacts(term: String) {
+        currentState.accept(.loading)
+        service.getFacts(term: term)
+            .subscribe(onNext: { facts in
+                let state = facts.isEmpty ? ListFactsState.empty : ListFactsState.success(self.mapper.convert(facts))
+                self.currentState.accept(state)
+            }, onError: { error in
+                let cnError: CNError = (error as? CNError) ?? CNError.internalError
+                self.currentState.accept(.error(cnError))
+            })
+            .disposed(by: self.bag)
     }
 }

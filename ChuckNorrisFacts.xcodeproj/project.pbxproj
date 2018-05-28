@@ -26,8 +26,11 @@
 		A1CCF8F820B6119D00E67D40 /* FactsMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF8F720B6119D00E67D40 /* FactsMapperTests.swift */; };
 		A1CCF8FA20B6120A00E67D40 /* FactsMapperMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF8F920B6120A00E67D40 /* FactsMapperMock.swift */; };
 		A1CCF8FC20B73EE000E67D40 /* ResultResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF8FB20B73EE000E67D40 /* ResultResponse.swift */; };
+		A1CCF8F020B5EAE300E67D40 /* ListFactsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF8EF20B5EAE300E67D40 /* ListFactsViewModelTests.swift */; };
 		A1CD4F8220B12FC2007C7C05 /* ListFactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD4F8120B12FC2007C7C05 /* ListFactsTableViewController.swift */; };
 		A1CD4F8420B4C530007C7C05 /* CNError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD4F8320B4C530007C7C05 /* CNError.swift */; };
+		A1CD4F8620B4FDE3007C7C05 /* ListFactsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD4F8520B4FDE3007C7C05 /* ListFactsState.swift */; };
+		A1CD4F8820BC78CD007C7C05 /* FactsPresentationMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD4F8720BC78CD007C7C05 /* FactsPresentationMapper.swift */; };
 		A1E08C9F20AF67AF002E1ED3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E08C9E20AF67AF002E1ED3 /* AppDelegate.swift */; };
 		A1E08CA420AF67AF002E1ED3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1E08CA220AF67AF002E1ED3 /* Main.storyboard */; };
 		A1E08CA620AF67B1002E1ED3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1E08CA520AF67B1002E1ED3 /* Assets.xcassets */; };
@@ -94,8 +97,11 @@
 		A1CCF8F720B6119D00E67D40 /* FactsMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsMapperTests.swift; sourceTree = "<group>"; };
 		A1CCF8F920B6120A00E67D40 /* FactsMapperMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsMapperMock.swift; sourceTree = "<group>"; };
 		A1CCF8FB20B73EE000E67D40 /* ResultResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultResponse.swift; sourceTree = "<group>"; };
+		A1CCF8EF20B5EAE300E67D40 /* ListFactsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFactsViewModelTests.swift; sourceTree = "<group>"; };
 		A1CD4F8120B12FC2007C7C05 /* ListFactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFactsTableViewController.swift; sourceTree = "<group>"; };
 		A1CD4F8320B4C530007C7C05 /* CNError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNError.swift; sourceTree = "<group>"; };
+		A1CD4F8520B4FDE3007C7C05 /* ListFactsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFactsState.swift; sourceTree = "<group>"; };
+		A1CD4F8720BC78CD007C7C05 /* FactsPresentationMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsPresentationMapper.swift; sourceTree = "<group>"; };
 		A1E08C9B20AF67AF002E1ED3 /* ChuckNorrisFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuckNorrisFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E08C9E20AF67AF002E1ED3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1E08CA320AF67AF002E1ED3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -215,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				A1CCF8F220B60E3900E67D40 /* FactsMapper.swift */,
+				A1CD4F8720BC78CD007C7C05 /* FactsPresentationMapper.swift */,
 			);
 			path = Mappers;
 			sourceTree = "<group>";
@@ -225,6 +232,14 @@
 				A1CCF8F720B6119D00E67D40 /* FactsMapperTests.swift */,
 			);
 			path = "Mapper Tests";
+			sourceTree = "<group>";
+		};
+		A1CCF8EE20B5EAD100E67D40 /* View Model Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A1CCF8EF20B5EAE300E67D40 /* ListFactsViewModelTests.swift */,
+			);
+			path = "View Model Tests";
 			sourceTree = "<group>";
 		};
 		A1CD4F7D20B12F09007C7C05 /* Supporting Files */ = {
@@ -262,6 +277,7 @@
 				A1CCF8CD20B33D9600E67D40 /* FactTableViewCell.swift */,
 				A1CCF8D120B3474100E67D40 /* ListFactsViewModel.swift */,
 				A1CCF8DD20B3730C00E67D40 /* FactPresentation.swift */,
+				A1CD4F8520B4FDE3007C7C05 /* ListFactsState.swift */,
 			);
 			path = "List Facts";
 			sourceTree = "<group>";
@@ -302,10 +318,11 @@
 			isa = PBXGroup;
 			children = (
 				A1CCF8F420B6117A00E67D40 /* Mapper Tests */,
+				A1CCF8F920B6120A00E67D40 /* FactsMapperMock.swift */,
+				A1CCF8EE20B5EAD100E67D40 /* View Model Tests */,
 				A1CCF8EB20B4954400E67D40 /* Service Tests */,
 				A1E08CB520AF67B1002E1ED3 /* Info.plist */,
 				A1CCF8DF20B47FDB00E67D40 /* FactServiceMock.swift */,
-				A1CCF8F920B6120A00E67D40 /* FactsMapperMock.swift */,
 			);
 			path = ChuckNorrisFactsTests;
 			sourceTree = "<group>";
@@ -499,10 +516,12 @@
 				A1CCF8DE20B3730C00E67D40 /* FactPresentation.swift in Sources */,
 				A1CCF8CE20B33D9600E67D40 /* FactTableViewCell.swift in Sources */,
 				A1CCF8D220B3474100E67D40 /* ListFactsViewModel.swift in Sources */,
+				A1CD4F8620B4FDE3007C7C05 /* ListFactsState.swift in Sources */,
 				A1CCF8CC20AF865A00E67D40 /* FactModel.swift in Sources */,
 				A1CD4F8420B4C530007C7C05 /* CNError.swift in Sources */,
 				A1CCF8DC20B3571300E67D40 /* Reactive+Extension.swift in Sources */,
 				A1CCF8C920AF85ED00E67D40 /* FactService.swift in Sources */,
+				A1CD4F8820BC78CD007C7C05 /* FactsPresentationMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,8 +530,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1CCF8FA20B6120A00E67D40 /* FactsMapperMock.swift in Sources */,
-				A1CCF8E020B47FDB00E67D40 /* FactServiceMock.swift in Sources */,
 				A1CCF8F820B6119D00E67D40 /* FactsMapperTests.swift in Sources */,
+				A1E08CB420AF67B1002E1ED3 /* ChuckNorrisFactsTests.swift in Sources */,
+				A1CCF8F020B5EAE300E67D40 /* ListFactsViewModelTests.swift in Sources */,
+				A1CCF8E020B47FDB00E67D40 /* FactServiceMock.swift in Sources */,
 				A1CCF8ED20B4955D00E67D40 /* FactServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
