@@ -6,6 +6,7 @@
 //  Copyright © 2018 Wanis. All rights reserved.
 //
 
+<<<<<<< HEAD
 @testable import ChuckNorrisFacts
 import RxSwift
 
@@ -16,6 +17,25 @@ struct FactServiceMock: FactServiceProtocol {
     
     func getFacts(term: String) -> Observable<Facts> {
         if shouldReturnSuccess {
+=======
+import Foundation
+@testable import ChuckNorrisFacts
+import RxSwift
+
+
+enum RequestErrorTypes: Error {
+    case none, networkError, internalError, badRequestError
+}
+
+struct FactServiceMock: FactServiceProtocol {
+    var errorType: RequestErrorTypes = .networkError
+    let facts: Facts = {
+        return [Fact(iconUrl: "someString", id: "someString", url: "someString", value: "value")]
+    }()
+    
+    func getFacts(term: String) -> Observable<Facts> {
+        if errorType == .none {
+>>>>>>> 4b82a2d... # This is a combination of 5 commits.
             return Observable.just(self.facts)
         }
         
@@ -26,6 +46,7 @@ struct FactServiceMock: FactServiceProtocol {
         return observable
     }
     
+<<<<<<< HEAD
     init(errorType: CNError) {
         self.shouldReturnSuccess = false
         self.errorType = errorType
@@ -35,4 +56,9 @@ struct FactServiceMock: FactServiceProtocol {
         self.shouldReturnSuccess = true
         self.facts.append(fact)
     }
+=======
+    init(errorType: RequestErrorTypes) {
+        self.errorType = errorType
+    }
+>>>>>>> 4b82a2d... # This is a combination of 5 commits.
 }
