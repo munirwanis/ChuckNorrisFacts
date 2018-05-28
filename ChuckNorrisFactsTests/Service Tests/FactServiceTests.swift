@@ -9,8 +9,8 @@
 @testable import ChuckNorrisFacts
 import Nimble
 import Quick
+import RxBlocking
 import RxSwift
-import RxTest
 
 class FactServiceTests: QuickSpec {
     var bag: DisposeBag!
@@ -30,17 +30,17 @@ class FactServiceTests: QuickSpec {
                     }
                     
                     it("should throw network error") {
-                        var apiError: Error?
                         
-                        service.getFacts(term: "some query")
-                            .do(onError: { error in
-                                apiError = error
-                            })
-                            .subscribe()
-                            .disposed(by: self.bag)
-                        
-                        expect(apiError as? CNError)
-                            .toEventually(equal(CNError.networkError), timeout: 2)
+                        do {
+                            _ = try service.getFacts(term: "some query")
+                                .toBlocking()
+                                .first()
+                            
+                            fail()
+                        } catch {
+                            expect(error as? CNError)
+                                .toEventually(equal(CNError.networkError), timeout: 2)
+                        }
                     }
                 }
                 
@@ -49,17 +49,16 @@ class FactServiceTests: QuickSpec {
                         service = FactServiceMock(errorType: .internalError)
                     }
                     it("should throw internal error") {
-                        var apiError: Error?
-                        
-                        service.getFacts(term: "some query")
-                            .do(onError: { error in
-                                apiError = error
-                            })
-                            .subscribe()
-                            .disposed(by: self.bag)
-                        
-                        expect(apiError as? CNError)
-                            .toEventually(equal(CNError.internalError), timeout: 2)
+                        do {
+                            _ = try service.getFacts(term: "some query")
+                                .toBlocking()
+                                .first()
+                            
+                            fail()
+                        } catch {
+                            expect(error as? CNError)
+                                .toEventually(equal(CNError.internalError), timeout: 2)
+                        }
                     }
                 }
                 
@@ -68,18 +67,16 @@ class FactServiceTests: QuickSpec {
                         service = FactServiceMock(errorType: .badRequestError)
                     }
                     it("should throw bad request error") {
-                        var apiError: Error?
-                        
-                        service.getFacts(term: "some query")
-                            .do(onError: { error in
-                                apiError = error
-                            })
-                            .subscribe()
-                            .disposed(by: self.bag)
-                        
-
-                        expect(apiError as? CNError)
-                            .toEventually(equal(CNError.badRequestError), timeout: 2)
+                        do {
+                            _ = try service.getFacts(term: "some query")
+                                .toBlocking()
+                                .first()
+                            
+                            fail()
+                        } catch {
+                            expect(error as? CNError)
+                                .toEventually(equal(CNError.badRequestError), timeout: 2)
+                        }
                     }
                 }
                 context("when json is not parsed correctly") {
@@ -87,17 +84,16 @@ class FactServiceTests: QuickSpec {
                         service = FactServiceMock(errorType: .parsePayloadError)
                     }
                     it("should throw parse error") {
-                        var apiError: Error?
-                        
-                        service.getFacts(term: "some query")
-                            .do(onError: { error in
-                                apiError = error
-                            })
-                            .subscribe()
-                            .disposed(by: self.bag)
-                        
-                        expect(apiError as? CNError)
-                            .toEventually(equal(CNError.parsePayloadError), timeout: 2)
+                        do {
+                            _ = try service.getFacts(term: "some query")
+                                .toBlocking()
+                                .first()
+                            
+                            fail()
+                        } catch {
+                            expect(error as? CNError)
+                                .toEventually(equal(CNError.parsePayloadError), timeout: 2)
+                        }
                     }
                 }
                 
@@ -108,17 +104,17 @@ class FactServiceTests: QuickSpec {
                         service = FactServiceMock(fact: fact)
                     }
                     it("should return facts") {
-                        var apiFacts = Facts()
-                        
-                        service.getFacts(term: "some query")
-                            .do(onNext: { facts in
-                                apiFacts = facts
-                            })
-                            .subscribe()
-                            .disposed(by: self.bag)
-                        
-                        expect(apiFacts.count).toEventually(equal(1), timeout: 2)
-                        expect(apiFacts.first?.value).toEventually(equal(fact.value), timeout: 2)
+                        do {
+                            let facts = try service.getFacts(term: "some query")
+                                .toBlocking()
+                                .first()!
+                            
+                            expect(facts.count).toEventually(equal(1), timeout: 2)
+                            expect(facts.first?.value).toEventually(equal(fact.value), timeout: 2)
+                        } catch {
+                            print(error)
+                            fail()
+                        }
                     }
                 }
             }
