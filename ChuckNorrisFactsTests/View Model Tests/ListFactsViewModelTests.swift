@@ -143,8 +143,8 @@ class ListFactsViewModelTests: QuickSpec {
                             .toEventually(beTruthy(), timeout: 2)
                         expect(factsPresentation!.count > 0)
                             .toEventually(beTruthy(), timeout: 2)
-                        expect(factsPresentation?.first?.isTextLong)
-                            .toEventually(beFalsy(), timeout: 2)
+                        expect(factsPresentation?.first?.textSize == 16.0)
+                            .toEventually(beTruthy(), timeout: 2)
                     } catch {
                         print(error)
                         fail()
@@ -188,7 +188,7 @@ class ListFactsViewModelTests: QuickSpec {
                             .toEventually(beTruthy(), timeout: 2)
                         expect(factsPresentation!.count > 0)
                             .toEventually(beTruthy(), timeout: 2)
-                        expect(factsPresentation?.first?.isTextLong)
+                        expect(factsPresentation?.first?.textSize == 14.0)
                             .toEventually(beTruthy(), timeout: 2)
                     } catch {
                         print(error)

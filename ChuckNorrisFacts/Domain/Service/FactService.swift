@@ -17,8 +17,11 @@ protocol FactServiceProtocol {
 struct FactService: FactServiceProtocol {
     let map: FactsMapperProtocol
     
+    private let baseURL: String
+    
     func getFacts(term: String) -> Observable<Facts> {
-        return Alamofire.request("https://api.chucknorris.io/jokes/search?query=\(term)").rx.responseData()
+        let encodedTerm = term.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? ""
+        return Alamofire.request("\(baseURL)/jokes/search?query=\(encodedTerm)").rx.responseData()
             .retry(1)
             .map { data in try self.map.facts(from: data) }
             .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
@@ -27,5 +30,8 @@ struct FactService: FactServiceProtocol {
     
     init(mapper: FactsMapperProtocol = FactsMapper()) {
         self.map = mapper
+        
+        let isTestMode = ProcessInfo.processInfo.arguments.contains("TEST-MODE")
+        baseURL = isTestMode ? "http://localhost:8080" : "https://api.chucknorris.io"
     }
 }

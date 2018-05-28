@@ -6,11 +6,28 @@
 //  Copyright © 2018 Wanis. All rights reserved.
 //
 
+import RxCocoa
+import RxSwift
 import UIKit
 
-class FactTableViewCell: UITableViewCell {
+final class FactTableViewCell: UITableViewCell {
     @IBOutlet private var factImage: UIImageView!
     @IBOutlet private var factLabel: UILabel!
+
+    private let bag = DisposeBag()
+
+    var fact: FactPresentation? {
+        didSet {
+            guard let fact = fact else { return }
+            factLabel.font.withSize(fact.textSize)
+            factLabel.text = fact.factText
+            fact.imageObservable
+                .subscribe(onNext: { [weak self] image in
+                    self?.factImage.image = image
+                })
+                .disposed(by: self.bag)
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

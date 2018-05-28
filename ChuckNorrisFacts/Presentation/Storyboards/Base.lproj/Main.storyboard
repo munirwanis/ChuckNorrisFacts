@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Wx-43-1hN">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
+    <device id="ipad12_9" orientation="portrait">
+        <adaptation id="splitview1_3"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -16,8 +16,8 @@
         <scene sceneID="GyX-YE-ELI">
             <objects>
                 <tableViewController id="R8d-CT-nep" customClass="ListFactsTableViewController" customModule="ChuckNorrisFacts" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="k4o-xX-bVY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="250" sectionHeaderHeight="28" sectionFooterHeight="28" id="k4o-xX-bVY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" name="Chuck Jeans"/>
                         <prototypes>
@@ -25,18 +25,18 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="130"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nnp-en-f4a" id="698-Ki-j6T">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="129.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Chuck Launch Logo" translatesAutoresizingMaskIntoConstraints="NO" id="M6Q-Ih-VSF">
-                                            <rect key="frame" x="16" y="11" width="108" height="108"/>
+                                            <rect key="frame" x="16" y="15" width="219" height="219"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="M6Q-Ih-VSF" secondAttribute="height" multiplier="1:1" id="ELL-Ls-KWS"/>
                                                 <constraint firstAttribute="width" constant="108" id="oxi-Li-WSR"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When Chuck Norris gets fast food, his order is ready before he walks in." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67B-lS-spn">
-                                            <rect key="frame" x="132" y="11" width="227" height="108"/>
+                                            <rect key="frame" x="243" y="15" width="116" height="219"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
@@ -56,6 +56,154 @@
                                 <connections>
                                     <outlet property="factImage" destination="M6Q-Ih-VSF" id="s7n-0d-MF1"/>
                                     <outlet property="factLabel" destination="67B-lS-spn" id="d2S-ht-own"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="NoConnectionCell" rowHeight="250" id="uRc-vK-XtP">
+                                <rect key="frame" x="0.0" y="158" width="375" height="250"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uRc-vK-XtP" id="0oD-0q-BdG">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A internet não é Chuck Norris e precisa de sinal pra funcionar." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKF-QC-rA6">
+                                            <rect key="frame" x="16" y="135" width="343" height="100"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="No Connection" translatesAutoresizingMaskIntoConstraints="NO" id="4KP-z4-EsG">
+                                            <rect key="frame" x="-74.5" y="15" width="524" height="120"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="120" id="IhJ-IO-7qr"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="cKF-QC-rA6" firstAttribute="trailing" secondItem="0oD-0q-BdG" secondAttribute="trailingMargin" id="5aw-eX-Bg6"/>
+                                        <constraint firstItem="cKF-QC-rA6" firstAttribute="bottom" secondItem="0oD-0q-BdG" secondAttribute="bottomMargin" id="6E7-X3-G1v"/>
+                                        <constraint firstItem="cKF-QC-rA6" firstAttribute="top" secondItem="4KP-z4-EsG" secondAttribute="bottom" id="EPT-42-gN9"/>
+                                        <constraint firstItem="4KP-z4-EsG" firstAttribute="top" secondItem="0oD-0q-BdG" secondAttribute="topMargin" id="EyR-8t-SFz"/>
+                                        <constraint firstItem="4KP-z4-EsG" firstAttribute="centerX" secondItem="0oD-0q-BdG" secondAttribute="centerX" id="To2-3t-tKZ"/>
+                                        <constraint firstItem="cKF-QC-rA6" firstAttribute="leading" secondItem="0oD-0q-BdG" secondAttribute="leadingMargin" id="eJo-63-ad3"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" name="Chuck Jeans"/>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="EmptyFactsCell" rowHeight="250" id="fp2-y3-VaO">
+                                <rect key="frame" x="0.0" y="408" width="375" height="250"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fp2-y3-VaO" id="zek-sS-AQ6">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A busca não encontrou Chuck Norris porque ele só aparece quando quer." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhs-Nq-JjL">
+                                            <rect key="frame" x="16" y="135" width="343" height="100"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Empty Facts" translatesAutoresizingMaskIntoConstraints="NO" id="ZdL-22-Dqo">
+                                            <rect key="frame" x="40" y="15" width="295" height="120"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="120" id="6Xg-VN-Yqb"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="lhs-Nq-JjL" firstAttribute="bottom" secondItem="zek-sS-AQ6" secondAttribute="bottomMargin" id="2pA-xn-i9z"/>
+                                        <constraint firstItem="lhs-Nq-JjL" firstAttribute="top" secondItem="ZdL-22-Dqo" secondAttribute="bottom" id="FDe-aX-f8k"/>
+                                        <constraint firstItem="ZdL-22-Dqo" firstAttribute="centerX" secondItem="zek-sS-AQ6" secondAttribute="centerX" id="N8I-xI-hz2"/>
+                                        <constraint firstItem="ZdL-22-Dqo" firstAttribute="top" secondItem="zek-sS-AQ6" secondAttribute="topMargin" id="cCn-06-s9i"/>
+                                        <constraint firstItem="lhs-Nq-JjL" firstAttribute="trailing" secondItem="zek-sS-AQ6" secondAttribute="trailingMargin" id="oFb-ex-ICj"/>
+                                        <constraint firstItem="lhs-Nq-JjL" firstAttribute="leading" secondItem="zek-sS-AQ6" secondAttribute="leadingMargin" id="txi-JG-QbY"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" name="Chuck Jeans"/>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="GeneralErrorCell" rowHeight="250" id="bBI-RX-p6U">
+                                <rect key="frame" x="0.0" y="658" width="375" height="250"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bBI-RX-p6U" id="YzE-FR-67X">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você fez algo de errado porque Chuck Norris nunca erra." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sO-Ra-GDg">
+                                            <rect key="frame" x="16" y="135" width="343" height="100"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="General Error" translatesAutoresizingMaskIntoConstraints="NO" id="fm1-dX-t1n">
+                                            <rect key="frame" x="-68.5" y="15" width="512" height="120"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="120" id="szk-gj-99E"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="8sO-Ra-GDg" firstAttribute="trailing" secondItem="YzE-FR-67X" secondAttribute="trailingMargin" id="7vS-TO-K0f"/>
+                                        <constraint firstItem="fm1-dX-t1n" firstAttribute="top" secondItem="YzE-FR-67X" secondAttribute="topMargin" id="Jgu-Xg-VQf"/>
+                                        <constraint firstItem="8sO-Ra-GDg" firstAttribute="bottom" secondItem="YzE-FR-67X" secondAttribute="bottomMargin" id="NjM-EK-xZ1"/>
+                                        <constraint firstItem="fm1-dX-t1n" firstAttribute="centerX" secondItem="YzE-FR-67X" secondAttribute="centerX" id="TrR-iF-S1E"/>
+                                        <constraint firstItem="8sO-Ra-GDg" firstAttribute="top" secondItem="fm1-dX-t1n" secondAttribute="bottom" id="o9b-Lw-Izw"/>
+                                        <constraint firstItem="8sO-Ra-GDg" firstAttribute="leading" secondItem="YzE-FR-67X" secondAttribute="leadingMargin" id="yeG-Vp-ZRS"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" name="Chuck Jeans"/>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="WaitingInputCell" rowHeight="250" id="FfF-AU-ZOC">
+                                <rect key="frame" x="0.0" y="908" width="375" height="250"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FfF-AU-ZOC" id="AcJ-9l-7KX">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Antes mesmo de procurar, Chuck Norris já aparece nos resultados!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CY0-rZ-Sx0">
+                                            <rect key="frame" x="16" y="135" width="343" height="100"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Waiting Input" translatesAutoresizingMaskIntoConstraints="NO" id="zjM-mI-HVr">
+                                            <rect key="frame" x="32.5" y="15" width="310" height="120"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="120" id="Nkb-Wn-LJU"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="CY0-rZ-Sx0" firstAttribute="bottom" secondItem="AcJ-9l-7KX" secondAttribute="bottomMargin" id="0x3-gK-GN7"/>
+                                        <constraint firstItem="CY0-rZ-Sx0" firstAttribute="trailing" secondItem="AcJ-9l-7KX" secondAttribute="trailingMargin" id="7Sy-zb-fhZ"/>
+                                        <constraint firstItem="zjM-mI-HVr" firstAttribute="centerX" secondItem="AcJ-9l-7KX" secondAttribute="centerX" id="KUI-OQ-qh7"/>
+                                        <constraint firstItem="zjM-mI-HVr" firstAttribute="top" secondItem="AcJ-9l-7KX" secondAttribute="topMargin" id="XDa-Pr-2ts"/>
+                                        <constraint firstItem="CY0-rZ-Sx0" firstAttribute="leading" secondItem="AcJ-9l-7KX" secondAttribute="leadingMargin" id="quq-Ir-F14"/>
+                                        <constraint firstItem="CY0-rZ-Sx0" firstAttribute="top" secondItem="zjM-mI-HVr" secondAttribute="bottom" id="sYa-fL-197"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" name="Chuck Jeans"/>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="LoadingCell" rowHeight="80" id="Hly-O8-aqa" customClass="LoadingCell" customModule="ChuckNorrisFacts" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="1158" width="375" height="80"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hly-O8-aqa" id="GEk-jy-nlm">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="0YF-cJ-N78">
+                                            <rect key="frame" x="169" y="21.5" width="37" height="37"/>
+                                        </activityIndicatorView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="0YF-cJ-N78" firstAttribute="centerY" secondItem="GEk-jy-nlm" secondAttribute="centerY" id="j4w-Er-YRr"/>
+                                        <constraint firstItem="0YF-cJ-N78" firstAttribute="centerX" secondItem="GEk-jy-nlm" secondAttribute="centerX" id="rWR-b1-WHZ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" name="Chuck Jeans"/>
+                                <connections>
+                                    <outlet property="activityIndicator" destination="0YF-cJ-N78" id="4ZX-xu-3mM"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -85,7 +233,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="525.60000000000002" y="144.3778110944528"/>
+            <point key="canvasLocation" x="525.60000000000002" y="144.07027818448023"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hff-Sr-iPY">
@@ -114,11 +262,15 @@
     </scenes>
     <resources>
         <image name="Chuck Launch Logo" width="360" height="219"/>
+        <image name="Empty Facts" width="295" height="303"/>
+        <image name="General Error" width="512" height="512"/>
+        <image name="No Connection" width="524" height="752"/>
+        <image name="Waiting Input" width="310" height="376"/>
         <namedColor name="Chuck Hair">
             <color red="0.94509803921568625" green="0.35294117647058826" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Chuck Jeans">
-            <color red="0.16078431372549021" green="0.6705882352941176" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.16078431369999999" green="0.6705882353" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
