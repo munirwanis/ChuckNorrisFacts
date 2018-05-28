@@ -9,18 +9,38 @@
 import Foundation
 import RxSwift
 
-class ListFactsViewModel {
-    let service = FactService()
+final class ListFactsViewModel {
+    private let service: FactServiceProtocol
+    private let bag = DisposeBag()
+    var currentState = Variable<ListFactsState>(.waitingForInput)
     
-    var presentation: Observable<[FactPresentation]>
-    
-    init() {
-        presentation = service.getFacts(term: "")
-            .map { facts in ListFactsViewModel.convert(facts) }
-            .observeOn(MainScheduler.instance)        
+    init(service: FactServiceProtocol = FactService()) {
+        self.service = service
     }
-    
-    private static func convert(_ facts: Facts) -> [FactPresentation] {
+}
+
+
+// MARK: - Public methods
+
+extension ListFactsViewModel {
+    func getFacts(term: String) {
+        currentState.value = .loading
+        service.getFacts(term: term)
+            .subscribe(onNext: { facts in
+                self.currentState.value = .success(self.convert(facts))
+            }, onError: { error in
+                let cnError: CNError = (error as? CNError) ?? CNError.internalError
+                self.currentState.value = .error(cnError)
+            })
+            .disposed(by: self.bag)
+    }
+}
+
+
+// MARK: - Private methods
+
+private extension ListFactsViewModel {
+    private func convert(_ facts: Facts) -> FactsPresentation {
         return facts.compactMap { FactPresentation(imageURL: $0.iconUrl, factText: $0.value) }
     }
 }

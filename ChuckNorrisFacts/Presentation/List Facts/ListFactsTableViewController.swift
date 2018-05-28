@@ -40,13 +40,13 @@ class ListFactsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: FactTableViewCell.identifier, for: indexPath)
-        _ = viewModel.presentation
-            .bind(to: tableView.rx.items(
-                cellIdentifier: FactTableViewCell.identifier,
-                cellType: FactTableViewCell.self)) { index, facts, cell in
-                    
-                   
-        }
+//        _ = viewModel.presentation
+//            .bind(to: tableView.rx.items(
+//                cellIdentifier: FactTableViewCell.identifier,
+//                cellType: FactTableViewCell.self)) { index, facts, cell in
+//                    
+//                   
+//        }
         
         return cell
     }

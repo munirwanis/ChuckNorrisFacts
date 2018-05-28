@@ -7,6 +7,7 @@
 //
 
 import Alamofire
+import AlamofireImage
 import RxSwift
 
 extension Request: ReactiveCompatible {}
@@ -39,6 +40,26 @@ extension Reactive where Base: DataRequest {
                     }
                 }
 
+            return Disposables.create {
+                request.cancel()
+            }
+        }
+    }
+    
+    func responseImage() -> Observable<Image> {
+        return Observable.create { observer in
+            let request = self.base.responseImage { response in
+                switch response.result {
+                case .success(let image):
+                    observer.onNext(image)
+                    observer.onCompleted()
+                    
+                case .failure(let error):
+                    Log.message(error)
+                    observer.onError(error)
+                }
+            }
+            
             return Disposables.create {
                 request.cancel()
             }

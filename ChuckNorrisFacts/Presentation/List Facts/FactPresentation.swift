@@ -6,9 +6,30 @@
 //  Copyright © 2018 Wanis. All rights reserved.
 //
 
-import Foundation
+import Alamofire
+import AlamofireImage
+import RxSwift
+import UIKit
 
 struct FactPresentation {
     let imageURL: String
     let factText: String
+    let imageObservable: Observable<UIImage>
+    
+    var isTextLong: Bool {
+        return factText.count > 50
+    }
+
+    init(imageURL: String, factText: String) {
+        self.imageURL = imageURL
+        self.factText = factText
+
+        self.imageObservable = Alamofire.request(self.imageURL).rx.responseImage()
+            .retry(1)
+            .map { $0 }
+            .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
+            .observeOn(MainScheduler.instance)
+    }
 }
+
+typealias FactsPresentation = [FactPresentation]
