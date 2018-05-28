@@ -55,7 +55,6 @@ extension Reactive where Base: DataRequest {
                     observer.onCompleted()
                     
                 case .failure(let error):
-                    Log.message(error)
                     observer.onError(error)
                 }
             }
