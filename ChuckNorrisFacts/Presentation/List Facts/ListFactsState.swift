@@ -9,7 +9,7 @@
 import Foundation
 
 enum ListFactsState {
-    case waitingForInput, loading
+    case waitingForInput, loading, empty
     case success(FactsPresentation)
     case error(CNError)
 }

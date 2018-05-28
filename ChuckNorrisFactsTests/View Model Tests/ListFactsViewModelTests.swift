@@ -196,6 +196,38 @@ class ListFactsViewModelTests: QuickSpec {
                     }
                 }
             }
+            
+            context("when state is empty") {
+                beforeEach {
+                    viewModel = ListFactsViewModel(service: FactServiceMock())
+                }
+                
+                it("should return empty state") {
+                    do {
+                        Perform.wait(seconds: 0.5) {
+                            viewModel.getFacts(term: "some query")
+                        }
+                        
+                        let state = try viewModel.currentState
+                            .asObservable()
+                            .skip(2)
+                            .take(1)
+                            .toBlocking(timeout: 3)
+                            .first()!
+                        
+                        var isEmpty = false
+                        switch state {
+                        case .empty: isEmpty = true
+                        default: isEmpty = false
+                        }
+                        
+                        expect(isEmpty).toEventually(beTruthy(), timeout: 2)
+                    } catch {
+                        print(error)
+                        fail()
+                    }
+                }
+            }
         }
     }
 }

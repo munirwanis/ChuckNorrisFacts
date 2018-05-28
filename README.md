@@ -15,3 +15,7 @@ https://github.com/edx/edx-platform/wiki/How-to-Rebase-a-Pull-Request
 https://stackoverflow.com/questions/30024353/how-to-use-visual-studio-code-as-default-editor-for-git
 
 http://swiftpearls.com/dynamic-ui-testing-http-mocking.html
+
+http://rx-marin.com/post/rxblocking-part1/
+
+http://rx-marin.com/post/rxblocking-part2/

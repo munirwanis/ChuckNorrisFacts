@@ -36,4 +36,8 @@ struct FactServiceMock: FactServiceProtocol {
         self.shouldReturnSuccess = true
         self.facts.append(fact)
     }
+    
+    init() {
+        self.shouldReturnSuccess = true
+    }
 }

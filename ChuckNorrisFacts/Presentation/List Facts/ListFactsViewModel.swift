@@ -12,11 +12,14 @@ import RxCocoa
 
 final class ListFactsViewModel {
     private let service: FactServiceProtocol
+    private let mapper: FactsPresentationMapperProtocol
     private let bag = DisposeBag()
     var currentState = BehaviorRelay<ListFactsState>(value: .waitingForInput)
     
-    init(service: FactServiceProtocol = FactService()) {
+    init(service: FactServiceProtocol = FactService(),
+         mapper: FactsPresentationMapperProtocol = FactsPresentationMapper()) {
         self.service = service
+        self.mapper = mapper
     }
 }
 
@@ -28,20 +31,12 @@ extension ListFactsViewModel {
         currentState.accept(.loading)
         service.getFacts(term: term)
             .subscribe(onNext: { facts in
-                self.currentState.accept(.success(self.convert(facts)))
+                let state = facts.isEmpty ? ListFactsState.empty : ListFactsState.success(self.mapper.convert(facts))
+                self.currentState.accept(state)
             }, onError: { error in
                 let cnError: CNError = (error as? CNError) ?? CNError.internalError
                 self.currentState.accept(.error(cnError))
             })
             .disposed(by: self.bag)
-    }
-}
-
-
-// MARK: - Private methods
-
-private extension ListFactsViewModel {
-    private func convert(_ facts: Facts) -> FactsPresentation {
-        return facts.compactMap { FactPresentation(imageURL: $0.iconUrl, factText: $0.value) }
     }
 }
