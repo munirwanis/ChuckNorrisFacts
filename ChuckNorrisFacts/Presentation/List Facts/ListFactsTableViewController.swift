@@ -6,18 +6,26 @@
 //  Copyright © 2018 Wanis. All rights reserved.
 //
 
-import UIKit
-import RxSwift
 import RxCocoa
+import RxSwift
+import UIKit
 
 class ListFactsTableViewController: UITableViewController {
-    
+
+    private let bag = DisposeBag()
+
     private let viewModel: ListFactsViewModel = {
-        return ListFactsViewModel()
+        ListFactsViewModel()
     }()
-    
+
     private var termToBeSearchedTextField: UITextField?
-    
+
+    private func showView<T: UIView>(of type: T.Type, among views: [UIView]) {
+        views.forEach { view in
+            view.alpha = view is T ? 1 : 0
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,6 +34,14 @@ class ListFactsTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        viewModel.currentState
+            .asObservable()
+            .subscribe(onNext: { state in
+                print(state)
+            }, onError: { error in
+                print(error)
+            })
+            .disposed(by: self.bag)
     }
 
     // MARK: - Table view data source
@@ -44,10 +60,10 @@ class ListFactsTableViewController: UITableViewController {
 //            .bind(to: tableView.rx.items(
 //                cellIdentifier: FactTableViewCell.identifier,
 //                cellType: FactTableViewCell.self)) { index, facts, cell in
-//                    
-//                   
+//
+//
 //        }
-        
+
         return cell
     }
 
@@ -106,7 +122,7 @@ extension ListFactsTableViewController {
             textField.placeholder = "Digite o termo a ser pesquisado..."
             self.termToBeSearchedTextField = textField
         }
-        
+
         let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel) { _ in
             alertView.dismiss(animated: true, completion: nil)
         }
@@ -116,7 +132,7 @@ extension ListFactsTableViewController {
             print(self.termToBeSearchedTextField?.text ?? "No term")
         }
         alertView.addAction(searchAction)
-        
+
         present(alertView, animated: true, completion: nil)
     }
 }

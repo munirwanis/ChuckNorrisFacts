@@ -8,11 +8,12 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 
 final class ListFactsViewModel {
     private let service: FactServiceProtocol
     private let bag = DisposeBag()
-    var currentState = Variable<ListFactsState>(.waitingForInput)
+    var currentState = BehaviorRelay<ListFactsState>(value: .waitingForInput)
     
     init(service: FactServiceProtocol = FactService()) {
         self.service = service
@@ -24,13 +25,13 @@ final class ListFactsViewModel {
 
 extension ListFactsViewModel {
     func getFacts(term: String) {
-        currentState.value = .loading
+        currentState.accept(.loading)
         service.getFacts(term: term)
             .subscribe(onNext: { facts in
-                self.currentState.value = .success(self.convert(facts))
+                self.currentState.accept(.success(self.convert(facts)))
             }, onError: { error in
                 let cnError: CNError = (error as? CNError) ?? CNError.internalError
-                self.currentState.value = .error(cnError)
+                self.currentState.accept(.error(cnError))
             })
             .disposed(by: self.bag)
     }
