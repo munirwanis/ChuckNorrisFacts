@@ -2,3 +2,4 @@ github "ReactiveX/RxSwift" ~> 4.1
 github "Alamofire/Alamofire" ~> 4.5
 github "Alamofire/AlamofireImage" ~> 3.3
 github "Swinject/Swinject" ~> 2.4
+github "Swinject/SwinjectStoryboard" ~> 2.0
