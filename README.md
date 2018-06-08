@@ -19,3 +19,7 @@ http://swiftpearls.com/dynamic-ui-testing-http-mocking.html
 http://rx-marin.com/post/rxblocking-part1/
 
 http://rx-marin.com/post/rxblocking-part2/
+
+## DI
+
+https://github.com/Swinject/SwinjectMVVMExample
