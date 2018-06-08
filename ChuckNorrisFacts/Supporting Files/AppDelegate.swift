@@ -6,6 +6,8 @@
 //  Copyright © 2018 Wanis. All rights reserved.
 //
 
+import Swinject
+import SwinjectStoryboard
 import UIKit
 
 @UIApplicationMain
@@ -13,8 +15,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    let container = Container { container in
+        // Mappers
+        container.register(FactsMapperProtocol.self) { _ in FactsMapper() }
+        container.register(FactsPresentationMapperProtocol.self) { _ in FactsPresentationMapper() }
+
+        // Services
+        container.register(FactServiceProtocol.self) { r in FactService(mapper: r.resolve(FactsMapperProtocol.self)!) }
+
+        // View models
+        container.register(ListFactsViewModel.self) { r in
+            ListFactsViewModel(service: r.resolve(FactServiceProtocol.self)!,
+                                        mapper: r.resolve(FactsPresentationMapperProtocol.self)!)
+        }
+        
+        // Views
+        container.storyboardInitCompleted(ListFactsTableViewController.self) { r, c in
+            c.viewModel = r.resolve(ListFactsViewModel.self)!
+        }
+    }
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.backgroundColor = UIColor.white
+        window.makeKeyAndVisible()
+        self.window = window
+        
+        let sb = SwinjectStoryboard.create(name: "Main", bundle: nil, container: container)
+        window.rootViewController = sb.instantiateViewController(withIdentifier: "Navigation")
         return true
     }
 

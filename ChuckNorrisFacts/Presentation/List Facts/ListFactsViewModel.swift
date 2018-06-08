@@ -16,8 +16,7 @@ final class ListFactsViewModel {
     private let bag = DisposeBag()
     var currentState = BehaviorRelay<ListFactsState>(value: .waitingForInput)
     
-    init(service: FactServiceProtocol = FactService(),
-         mapper: FactsPresentationMapperProtocol = FactsPresentationMapper()) {
+    init(service: FactServiceProtocol, mapper: FactsPresentationMapperProtocol) {
         self.service = service
         self.mapper = mapper
     }

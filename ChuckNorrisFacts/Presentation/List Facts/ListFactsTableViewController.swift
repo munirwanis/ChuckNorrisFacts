@@ -14,9 +14,7 @@ final class ListFactsTableViewController: UITableViewController {
 
     private let bag = DisposeBag()
 
-    private let viewModel: ListFactsViewModel = {
-        ListFactsViewModel()
-    }()
+    var viewModel: ListFactsViewModel!
 
     private lazy var alertViewController: UIAlertController = {
         let alertView = UIAlertController(title: "Pesquisa", message: nil, preferredStyle: .alert)

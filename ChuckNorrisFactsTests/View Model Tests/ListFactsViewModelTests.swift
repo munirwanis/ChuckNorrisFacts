@@ -12,8 +12,24 @@ import Quick
 import RxBlocking
 import RxCocoa
 import RxSwift
+import Swinject
 
 class ListFactsViewModelTests: QuickSpec {
+
+    // Terrible for testing.
+//    let container = Container { container in
+//        // Mappers
+//        container.register(FactsPresentationMapperProtocol.self) { _ in FactsPresentationMapper() }
+//
+//        // Services
+//        container.register(FactServiceProtocol.self) { _ in FactServiceMock(errorType: .badRequestError) }
+//
+//        // View models
+//        container.register(ListFactsViewModel.self) { r in
+//            ListFactsViewModel(service: r.resolve(FactServiceProtocol.self)!,
+//                               mapper: r.resolve(FactsPresentationMapperProtocol.self)!)
+//        }
+//    }
     
     override func spec() {
         describe("listFactsViewModel") {
@@ -21,7 +37,7 @@ class ListFactsViewModelTests: QuickSpec {
             
             context("when state is error") {
                 beforeEach {
-                    viewModel = ListFactsViewModel(service: FactServiceMock(errorType: .badRequestError))
+                    viewModel = ListFactsViewModel(service: FactServiceMock(errorType: .badRequestError), mapper: FactsPresentationMapper())
                 }
                 
                 it("should show bad request eror state") {
@@ -45,7 +61,7 @@ class ListFactsViewModelTests: QuickSpec {
             
             context("when state is waiting for input") {
                 beforeEach {
-                    viewModel = ListFactsViewModel(service: FactServiceMock(errorType: .badRequestError))
+                    viewModel = ListFactsViewModel(service: FactServiceMock(errorType: .badRequestError), mapper: FactsPresentationMapper())
                 }
                 
                 it("should show waiting for input state") {
@@ -77,7 +93,7 @@ class ListFactsViewModelTests: QuickSpec {
             
             context("when state is loading") {
                 beforeEach {
-                    viewModel = ListFactsViewModel(service: FactServiceMock(errorType: .badRequestError))
+                    viewModel = ListFactsViewModel(service: FactServiceMock(errorType: .badRequestError), mapper: FactsPresentationMapper())
                 }
                 
                 it("should show loading state") {
@@ -116,7 +132,7 @@ class ListFactsViewModelTests: QuickSpec {
                         value: "someValue"
                     )
                     let service = FactServiceMock(fact: fact)
-                    viewModel = ListFactsViewModel(service: service)
+                    viewModel = ListFactsViewModel(service: service, mapper: FactsPresentationMapper())
                 }
                 
                 it("should return success with facts") {
@@ -161,7 +177,7 @@ class ListFactsViewModelTests: QuickSpec {
                         value: "some characters with length bigger than fifty, is that possible?"
                     )
                     let service = FactServiceMock(fact: fact)
-                    viewModel = ListFactsViewModel(service: service)
+                    viewModel = ListFactsViewModel(service: service, mapper: FactsPresentationMapper())
                 }
                 
                 it("should return success with long text fact") {
@@ -199,7 +215,7 @@ class ListFactsViewModelTests: QuickSpec {
             
             context("when state is empty") {
                 beforeEach {
-                    viewModel = ListFactsViewModel(service: FactServiceMock())
+                    viewModel = ListFactsViewModel(service: FactServiceMock(), mapper: FactsPresentationMapper())
                 }
                 
                 it("should return empty state") {

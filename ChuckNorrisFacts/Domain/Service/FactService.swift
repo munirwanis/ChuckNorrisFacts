@@ -28,7 +28,7 @@ struct FactService: FactServiceProtocol {
             .observeOn(MainScheduler.instance)
     }
     
-    init(mapper: FactsMapperProtocol = FactsMapper()) {
+    init(mapper: FactsMapperProtocol) {
         self.map = mapper
         
         let isTestMode = ProcessInfo.processInfo.arguments.contains("TEST-MODE")
