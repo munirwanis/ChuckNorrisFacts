@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A17121A220CA3C37008F7339 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A17121A120CA3C37008F7339 /* Swinject.framework */; };
 		A17121A420CA3F6A008F7339 /* SwinjectStoryboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A17121A320CA3F6A008F7339 /* SwinjectStoryboard.framework */; };
+		A17121A520CA461E008F7339 /* Swinject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A17121A120CA3C37008F7339 /* Swinject.framework */; };
+		A17121A620CA4624008F7339 /* Swinject.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A17121A120CA3C37008F7339 /* Swinject.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A1CCF8C620AF842000E67D40 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF8C520AF842000E67D40 /* Fact.swift */; };
 		A1CCF8C920AF85ED00E67D40 /* FactService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF8C820AF85ED00E67D40 /* FactService.swift */; };
 		A1CCF8CC20AF865A00E67D40 /* FactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF8CB20AF865A00E67D40 /* FactModel.swift */; };
@@ -93,6 +95,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				A17121A620CA4624008F7339 /* Swinject.framework in CopyFiles */,
 				A1CCF8E920B494E200E67D40 /* Nimble.framework in CopyFiles */,
 				A1CCF8EA20B494E200E67D40 /* Quick.framework in CopyFiles */,
 				A1E08CE520AF7982002E1ED3 /* RxBlocking.framework in CopyFiles */,
@@ -175,6 +178,7 @@
 				A1CCF8E720B494C900E67D40 /* Nimble.framework in Frameworks */,
 				A1E08CE320AF7979002E1ED3 /* RxTest.framework in Frameworks */,
 				A1E08CE420AF7979002E1ED3 /* RxBlocking.framework in Frameworks */,
+				A17121A520CA461E008F7339 /* Swinject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
