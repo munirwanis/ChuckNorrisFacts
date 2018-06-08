@@ -22,15 +22,25 @@
 		A1CCF8E920B494E200E67D40 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A1CCF8E520B494C900E67D40 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A1CCF8EA20B494E200E67D40 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A1CCF8E620B494C900E67D40 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A1CCF8ED20B4955D00E67D40 /* FactServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF8EC20B4955D00E67D40 /* FactServiceTests.swift */; };
+		A1CCF8F020B5EAE300E67D40 /* ListFactsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF8EF20B5EAE300E67D40 /* ListFactsViewModelTests.swift */; };
 		A1CCF8F320B60E3900E67D40 /* FactsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF8F220B60E3900E67D40 /* FactsMapper.swift */; };
 		A1CCF8F820B6119D00E67D40 /* FactsMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF8F720B6119D00E67D40 /* FactsMapperTests.swift */; };
 		A1CCF8FA20B6120A00E67D40 /* FactsMapperMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF8F920B6120A00E67D40 /* FactsMapperMock.swift */; };
 		A1CCF8FC20B73EE000E67D40 /* ResultResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF8FB20B73EE000E67D40 /* ResultResponse.swift */; };
-		A1CCF8F020B5EAE300E67D40 /* ListFactsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF8EF20B5EAE300E67D40 /* ListFactsViewModelTests.swift */; };
+		A1CCF8FE20BDF98000E67D40 /* Swifter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1CCF8FD20BDF98000E67D40 /* Swifter.framework */; };
+		A1CCF90120BDF9A000E67D40 /* Swifter.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A1CCF8FD20BDF98000E67D40 /* Swifter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A1CCF90320BDFA0300E67D40 /* HTTPDynamicStubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CCF90220BDFA0300E67D40 /* HTTPDynamicStubs.swift */; };
+		A1CCF90420BDFA6100E67D40 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1CCF8E520B494C900E67D40 /* Nimble.framework */; };
+		A1CCF90520BDFA6400E67D40 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A1CCF8E520B494C900E67D40 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A1CCF90820BDFEC500E67D40 /* json_correct.json in Resources */ = {isa = PBXBuildFile; fileRef = A1CCF90720BDFEC500E67D40 /* json_correct.json */; };
+		A1CCF90A20BDFEE000E67D40 /* json_wrong.json in Resources */ = {isa = PBXBuildFile; fileRef = A1CCF90920BDFEE000E67D40 /* json_wrong.json */; };
+		A1CCF90C20BDFEF100E67D40 /* json_empty.json in Resources */ = {isa = PBXBuildFile; fileRef = A1CCF90B20BDFEF100E67D40 /* json_empty.json */; };
+		A1CCF90E20BEFB8B00E67D40 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A1CCF90D20BEFB8B00E67D40 /* Default-568h@2x.png */; };
 		A1CD4F8220B12FC2007C7C05 /* ListFactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD4F8120B12FC2007C7C05 /* ListFactsTableViewController.swift */; };
 		A1CD4F8420B4C530007C7C05 /* CNError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD4F8320B4C530007C7C05 /* CNError.swift */; };
 		A1CD4F8620B4FDE3007C7C05 /* ListFactsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD4F8520B4FDE3007C7C05 /* ListFactsState.swift */; };
 		A1CD4F8820BC78CD007C7C05 /* FactsPresentationMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD4F8720BC78CD007C7C05 /* FactsPresentationMapper.swift */; };
+		A1CD4F8B20BCE89B007C7C05 /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1CD4F8A20BCE89A007C7C05 /* LoadingCell.swift */; };
 		A1E08C9F20AF67AF002E1ED3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E08C9E20AF67AF002E1ED3 /* AppDelegate.swift */; };
 		A1E08CA420AF67AF002E1ED3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1E08CA220AF67AF002E1ED3 /* Main.storyboard */; };
 		A1E08CA620AF67B1002E1ED3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1E08CA520AF67B1002E1ED3 /* Assets.xcassets */; };
@@ -64,6 +74,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		A1CCF90020BDF99900E67D40 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A1CCF90120BDF9A000E67D40 /* Swifter.framework in CopyFiles */,
+				A1CCF90520BDFA6400E67D40 /* Nimble.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A1E08CDC20AF7886002E1ED3 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -93,15 +114,22 @@
 		A1CCF8E520B494C900E67D40 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		A1CCF8E620B494C900E67D40 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		A1CCF8EC20B4955D00E67D40 /* FactServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactServiceTests.swift; sourceTree = "<group>"; };
+		A1CCF8EF20B5EAE300E67D40 /* ListFactsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFactsViewModelTests.swift; sourceTree = "<group>"; };
 		A1CCF8F220B60E3900E67D40 /* FactsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsMapper.swift; sourceTree = "<group>"; };
 		A1CCF8F720B6119D00E67D40 /* FactsMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsMapperTests.swift; sourceTree = "<group>"; };
 		A1CCF8F920B6120A00E67D40 /* FactsMapperMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsMapperMock.swift; sourceTree = "<group>"; };
 		A1CCF8FB20B73EE000E67D40 /* ResultResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultResponse.swift; sourceTree = "<group>"; };
-		A1CCF8EF20B5EAE300E67D40 /* ListFactsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFactsViewModelTests.swift; sourceTree = "<group>"; };
+		A1CCF8FD20BDF98000E67D40 /* Swifter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swifter.framework; path = Carthage/Build/iOS/Swifter.framework; sourceTree = "<group>"; };
+		A1CCF90220BDFA0300E67D40 /* HTTPDynamicStubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPDynamicStubs.swift; sourceTree = "<group>"; };
+		A1CCF90720BDFEC500E67D40 /* json_correct.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = json_correct.json; sourceTree = "<group>"; };
+		A1CCF90920BDFEE000E67D40 /* json_wrong.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = json_wrong.json; sourceTree = "<group>"; };
+		A1CCF90B20BDFEF100E67D40 /* json_empty.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = json_empty.json; sourceTree = "<group>"; };
+		A1CCF90D20BEFB8B00E67D40 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		A1CD4F8120B12FC2007C7C05 /* ListFactsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFactsTableViewController.swift; sourceTree = "<group>"; };
 		A1CD4F8320B4C530007C7C05 /* CNError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CNError.swift; sourceTree = "<group>"; };
 		A1CD4F8520B4FDE3007C7C05 /* ListFactsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListFactsState.swift; sourceTree = "<group>"; };
 		A1CD4F8720BC78CD007C7C05 /* FactsPresentationMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactsPresentationMapper.swift; sourceTree = "<group>"; };
+		A1CD4F8A20BCE89A007C7C05 /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
 		A1E08C9B20AF67AF002E1ED3 /* ChuckNorrisFacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChuckNorrisFacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1E08C9E20AF67AF002E1ED3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1E08CA320AF67AF002E1ED3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -148,6 +176,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1CCF8FE20BDF98000E67D40 /* Swifter.framework in Frameworks */,
+				A1CCF90420BDFA6100E67D40 /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +247,14 @@
 			path = "Service Tests";
 			sourceTree = "<group>";
 		};
+		A1CCF8EE20B5EAD100E67D40 /* View Model Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A1CCF8EF20B5EAE300E67D40 /* ListFactsViewModelTests.swift */,
+			);
+			path = "View Model Tests";
+			sourceTree = "<group>";
+		};
 		A1CCF8F120B60E2D00E67D40 /* Mappers */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,12 +272,14 @@
 			path = "Mapper Tests";
 			sourceTree = "<group>";
 		};
-		A1CCF8EE20B5EAD100E67D40 /* View Model Tests */ = {
+		A1CCF90620BDFE9A00E67D40 /* JSONs */ = {
 			isa = PBXGroup;
 			children = (
-				A1CCF8EF20B5EAE300E67D40 /* ListFactsViewModelTests.swift */,
+				A1CCF90720BDFEC500E67D40 /* json_correct.json */,
+				A1CCF90920BDFEE000E67D40 /* json_wrong.json */,
+				A1CCF90B20BDFEF100E67D40 /* json_empty.json */,
 			);
-			path = "View Model Tests";
+			path = JSONs;
 			sourceTree = "<group>";
 		};
 		A1CD4F7D20B12F09007C7C05 /* Supporting Files */ = {
@@ -273,8 +313,8 @@
 		A1CD4F8020B12FA7007C7C05 /* List Facts */ = {
 			isa = PBXGroup;
 			children = (
+				A1CD4F8920BCE878007C7C05 /* Cells */,
 				A1CD4F8120B12FC2007C7C05 /* ListFactsTableViewController.swift */,
-				A1CCF8CD20B33D9600E67D40 /* FactTableViewCell.swift */,
 				A1CCF8D120B3474100E67D40 /* ListFactsViewModel.swift */,
 				A1CCF8DD20B3730C00E67D40 /* FactPresentation.swift */,
 				A1CD4F8520B4FDE3007C7C05 /* ListFactsState.swift */,
@@ -282,9 +322,19 @@
 			path = "List Facts";
 			sourceTree = "<group>";
 		};
+		A1CD4F8920BCE878007C7C05 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A1CCF8CD20B33D9600E67D40 /* FactTableViewCell.swift */,
+				A1CD4F8A20BCE89A007C7C05 /* LoadingCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		A1E08C9220AF67AF002E1ED3 = {
 			isa = PBXGroup;
 			children = (
+				A1CCF90D20BEFB8B00E67D40 /* Default-568h@2x.png */,
 				A1E08C9D20AF67AF002E1ED3 /* ChuckNorrisFacts */,
 				A1E08CB220AF67B1002E1ED3 /* ChuckNorrisFactsTests */,
 				A1E08CBD20AF67B1002E1ED3 /* ChuckNorrisFactsUITests */,
@@ -330,8 +380,10 @@
 		A1E08CBD20AF67B1002E1ED3 /* ChuckNorrisFactsUITests */ = {
 			isa = PBXGroup;
 			children = (
+				A1CCF90620BDFE9A00E67D40 /* JSONs */,
 				A1E08CBE20AF67B1002E1ED3 /* ChuckNorrisFactsUITests.swift */,
 				A1E08CC020AF67B1002E1ED3 /* Info.plist */,
+				A1CCF90220BDFA0300E67D40 /* HTTPDynamicStubs.swift */,
 			);
 			path = ChuckNorrisFactsUITests;
 			sourceTree = "<group>";
@@ -339,6 +391,7 @@
 		A1E08CCC20AF7629002E1ED3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A1CCF8FD20BDF98000E67D40 /* Swifter.framework */,
 				A1CCF8E520B494C900E67D40 /* Nimble.framework */,
 				A1CCF8E620B494C900E67D40 /* Quick.framework */,
 				A1E08CE220AF7979002E1ED3 /* RxBlocking.framework */,
@@ -398,6 +451,7 @@
 				A1E08CB620AF67B1002E1ED3 /* Sources */,
 				A1E08CB720AF67B1002E1ED3 /* Frameworks */,
 				A1E08CB820AF67B1002E1ED3 /* Resources */,
+				A1CCF90020BDF99900E67D40 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -458,6 +512,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1E08CA920AF67B1002E1ED3 /* LaunchScreen.storyboard in Resources */,
+				A1CCF90E20BEFB8B00E67D40 /* Default-568h@2x.png in Resources */,
 				A1E08CA620AF67B1002E1ED3 /* Assets.xcassets in Resources */,
 				A1E08CA420AF67AF002E1ED3 /* Main.storyboard in Resources */,
 			);
@@ -474,6 +529,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1CCF90820BDFEC500E67D40 /* json_correct.json in Resources */,
+				A1CCF90C20BDFEF100E67D40 /* json_empty.json in Resources */,
+				A1CCF90A20BDFEE000E67D40 /* json_wrong.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +575,7 @@
 				A1CCF8CE20B33D9600E67D40 /* FactTableViewCell.swift in Sources */,
 				A1CCF8D220B3474100E67D40 /* ListFactsViewModel.swift in Sources */,
 				A1CD4F8620B4FDE3007C7C05 /* ListFactsState.swift in Sources */,
+				A1CD4F8B20BCE89B007C7C05 /* LoadingCell.swift in Sources */,
 				A1CCF8CC20AF865A00E67D40 /* FactModel.swift in Sources */,
 				A1CD4F8420B4C530007C7C05 /* CNError.swift in Sources */,
 				A1CCF8DC20B3571300E67D40 /* Reactive+Extension.swift in Sources */,
@@ -531,7 +590,6 @@
 			files = (
 				A1CCF8FA20B6120A00E67D40 /* FactsMapperMock.swift in Sources */,
 				A1CCF8F820B6119D00E67D40 /* FactsMapperTests.swift in Sources */,
-				A1E08CB420AF67B1002E1ED3 /* ChuckNorrisFactsTests.swift in Sources */,
 				A1CCF8F020B5EAE300E67D40 /* ListFactsViewModelTests.swift in Sources */,
 				A1CCF8E020B47FDB00E67D40 /* FactServiceMock.swift in Sources */,
 				A1CCF8ED20B4955D00E67D40 /* FactServiceTests.swift in Sources */,
@@ -543,6 +601,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1E08CBF20AF67B1002E1ED3 /* ChuckNorrisFactsUITests.swift in Sources */,
+				A1CCF90320BDFA0300E67D40 /* HTTPDynamicStubs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -799,6 +858,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H4K48S49BZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ChuckNorrisFactsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -819,6 +882,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H4K48S49BZ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ChuckNorrisFactsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

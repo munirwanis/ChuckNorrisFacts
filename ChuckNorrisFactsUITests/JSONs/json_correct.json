@@ -1,0 +1,52 @@
+{
+    "total": 7,
+    "result": [{
+        "category": null,
+        "icon_url": "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
+        "id": "Ne-M6C0cQbC8Syy06efbJQ",
+        "url": "https://api.chucknorris.io/jokes/Ne-M6C0cQbC8Syy06efbJQ",
+        "value": "Chuck Norris is in the death star trench run; Obi one kenobi: use the force chuck. Chuck Norris: F*** you old man, I use round house kick. Period The death star blew up with only one roundhouse kick and the universe was saved."
+    },
+    {
+        "category": null,
+        "icon_url": "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
+        "id": "r736GJqfQ2WdaTBQKR1Xbg",
+        "url": "https://api.chucknorris.io/jokes/r736GJqfQ2WdaTBQKR1Xbg",
+        "value": "The Death Star's original name was Space Station Chuck Norris."
+    },
+    {
+        "category": null,
+        "icon_url": "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
+        "id": "E_i7e2AWQkWiKlRRLn9UtA",
+        "url": "https://api.chucknorris.io/jokes/E_i7e2AWQkWiKlRRLn9UtA",
+        "value": "Chuck Norris blew up the Death Star with a roundhouse kick."
+    },
+    {
+        "category": null,
+        "icon_url": "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
+        "id": "DjBFmo-PT-atAkahQz1dGA",
+        "url": "https://api.chucknorris.io/jokes/DjBFmo-PT-atAkahQz1dGA",
+        "value": "Chuck Norris knew where the stolen Death Star plans were.(and he also knew where that shuttle was going.)"
+    },
+    {
+        "category": null,
+        "icon_url": "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
+        "id": "o7Y9H9HqRC2myBYjFN_kpA",
+        "url": "https://api.chucknorris.io/jokes/o7Y9H9HqRC2myBYjFN_kpA",
+        "value": "Chuck Norris can cremate you instantly with a mean-ass death stare."
+    },
+    {
+        "category": null,
+        "icon_url": "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
+        "id": "tMsLA0d2S42qINVoTy5SlQ",
+        "url": "https://api.chucknorris.io/jokes/tMsLA0d2S42qINVoTy5SlQ",
+        "value": "Chuck Norris lives in the guest house at his Texas palatial estate. Only his main house mansion is spacious enough to store all of his guns, ammo and ninja death stars."
+    },
+    {
+        "category": null,
+        "icon_url": "https://assets.chucknorris.host/img/avatar/chuck-norris.png",
+        "id": "59IvTOvSQcuQfh2G2VMTUA",
+        "url": "https://api.chucknorris.io/jokes/59IvTOvSQcuQfh2G2VMTUA",
+        "value": "Darth Vader claimed the Death Star matched the power of Chuck Norris. It was then destroyed....... twice."
+    }]
+}

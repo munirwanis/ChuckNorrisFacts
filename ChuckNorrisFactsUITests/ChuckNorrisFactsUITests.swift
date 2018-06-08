@@ -7,30 +7,90 @@
 //
 
 import XCTest
+import Swifter
+import Nimble
+
 
 class ChuckNorrisFactsUITests: XCTestCase {
-        
+    
+    private var app: XCUIApplication!
+    private let stubs = HTTPDynamicStubs()
+    private let existsPredicate = NSPredicate(format: "exists == true")
+    
     override func setUp() {
         super.setUp()
         
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        stubs.setUp()
         
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        app = XCUIApplication()
+        app.launchArguments = ["TEST-MODE"]
+        app.launch()
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        stubs.tearDown()
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testInitialViewElementsExistence() {
+        let searchButton = app.navigationBars["Chuck Norris Facts"].buttons["Pesquisar"]
+        searchButton.tap()
+        let alert = app.alerts["Pesquisa"]
+        let textField = alert.collectionViews.textFields["Digite o termo a ser pesquisado..."]
+        let alertButton = alert.buttons["Pesquisar"]
+        
+        assertExists([searchButton, alert, textField, alertButton])
     }
     
+    func testInitialView() {
+        assertCellExistence(name: "Antes mesmo de procurar, Chuck Norris já aparece nos resultados!")
+    }
+    
+    func testCorrectSearch() {
+        stubs.setupStub(url: "/jokes/search?query=correct", filename: "json_correct")
+        performSearch(term: "correct", cellText: "The Death Star's original name was Space Station Chuck Norris.")
+    }
+    
+    func testErrorSearch() {
+        stubs.setupStub(url: "/jokes/search?query=wrong", filename: "json_wrong")
+        performSearch(term: "wrong", cellText: "Você fez algo de errado porque Chuck Norris nunca erra.")
+    }
+    
+    func testEmptySearch() {
+        stubs.setupStub(url: "/jokes/search?query=empty", filename: "json_empty")
+        performSearch(term: "empty", cellText: "A busca não encontrou Chuck Norris porque ele só aparece quando quer.")
+    }
+    
+    private func performSearch(term: String, cellText: String) {
+        let searchButton = app.navigationBars["Chuck Norris Facts"].buttons["Pesquisar"]
+        searchButton.tap()
+        
+        let alert = app.alerts["Pesquisa"]
+        alert.collectionViews.textFields["Digite o termo a ser pesquisado..."].typeText(term)
+        alert.buttons["Pesquisar"].tap()
+        
+        assertCellExistence(name: cellText)
+    }
+    
+    private func assertCellExistence(name cellText: String) {
+        let table = app.tables.element
+        
+        expectation(for: existsPredicate, evaluatedWith: table, handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
+        
+        let cell = table.cells.staticTexts[cellText]
+        
+        expectation(for: existsPredicate, evaluatedWith: cell, handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
+        
+        cell.swipeUp()
+        cell.swipeDown()
+    }
+    
+    private func assertExists(_ elements: [XCUIElement]) {
+        elements.forEach { element in
+            expect(element.exists).to(beTrue())
+        }
+    }
 }

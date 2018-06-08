@@ -16,8 +16,8 @@ struct FactPresentation {
     let factText: String
     let imageObservable: Observable<UIImage>
     
-    var isTextLong: Bool {
-        return factText.count > 50
+    var textSize: CGFloat {
+        return factText.count > 50 ? 14.0 : 16.0
     }
 
     init(imageURL: String, factText: String) {
