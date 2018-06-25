@@ -54,6 +54,7 @@
 		A1E08CE420AF7979002E1ED3 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1E08CE220AF7979002E1ED3 /* RxBlocking.framework */; };
 		A1E08CE520AF7982002E1ED3 /* RxBlocking.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A1E08CE220AF7979002E1ED3 /* RxBlocking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A1E08CE620AF7982002E1ED3 /* RxTest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A1E08CE120AF7979002E1ED3 /* RxTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A1F19AAB20E18D09005A1B5C /* Guise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1F19AAA20E18D09005A1B5C /* Guise.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +148,7 @@
 		A1E08CD120AF7629002E1ED3 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		A1E08CE120AF7979002E1ED3 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 		A1E08CE220AF7979002E1ED3 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		A1F19AAA20E18D09005A1B5C /* Guise.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Guise.framework; path = Carthage/Build/iOS/Guise.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 				A1E08CD520AF762A002E1ED3 /* AlamofireImage.framework in Frameworks */,
 				A1E08CD620AF762A002E1ED3 /* Alamofire.framework in Frameworks */,
 				A1E08CD720AF762A002E1ED3 /* RxCocoa.framework in Frameworks */,
+				A1F19AAB20E18D09005A1B5C /* Guise.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +394,7 @@
 		A1E08CCC20AF7629002E1ED3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A1F19AAA20E18D09005A1B5C /* Guise.framework */,
 				A1CCF8FD20BDF98000E67D40 /* Swifter.framework */,
 				A1CCF8E520B494C900E67D40 /* Nimble.framework */,
 				A1CCF8E620B494C900E67D40 /* Quick.framework */,
@@ -550,6 +554,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxTest.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Guise.framework",
 			);
 			outputPaths = (
 			);
